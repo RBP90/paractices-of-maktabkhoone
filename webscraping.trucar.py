@@ -1,8 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import mysql.connector
+import os
 
-cnx = mysql.connector.connect(user='root', password='reza6678232',
+password = os.environ.get('MYSQL_PASSWORD')
+cnx = mysql.connector.connect(user='root', password=password,
                               host='127.0.0.1',
                               database='maktabkhoone')
 
